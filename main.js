@@ -11,13 +11,16 @@ form.addEventListener("submit", function(e){
 })
 
 function adicionaLinha() {
+    if (isNaN(numeroTel.value)){
+        alert("Apenas numeros")
+    } else {
     let linha = '<tr>';
     linha += `<td>${nome.value}</td>`;
     linha += `<td>${numeroTel.value}</td>`;
     linha += `</tr>`;
 
     linhas += linha;
-
+}
     nome.value = '';
     numeroTel.value = '';
 }
